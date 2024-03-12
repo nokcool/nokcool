@@ -16,7 +16,9 @@ public class issue {
         String word1 = getString(w1);//将原版论文写入字符串
         String word2 = getString(w2);//将抄袭版论文写入字符串
         long count = getCount(word2, word1);//计算重复字数
-        long result=count*100000/word2.length();
+        long result=0；
+        if(word2.length!=0)
+        result=count*100000/word2.length();
         long[] arr = getInts(result);//计算重复率，将结果存入数组
         writeResult(arr, out);//将结果写入文件中
     }
